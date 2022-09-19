@@ -31,7 +31,7 @@ const Header = () => {
 					<div className='menu'>
 						<Scrollspy
 							className='anchor_nav'
-							items={["home", "about", "experience", "contact"]}
+							items={["home", "about", "experience", "blog", "contact"]}
 							currentClassName='current'
 							offset={-200}>
 							<li>
@@ -44,7 +44,19 @@ const Header = () => {
 								<a href='#experience'>Experience</a>
 							</li>
 							<li>
+								<a href='#blog'>Blog</a>
+							</li>
+							<li>
 								<a href='#contact'>Socials</a>
+							</li>
+							<li>
+								<a
+									className='white-fill-bg btn-outline btn_sm'
+									target='_blank'
+									rel='noopener noreferrer'
+									href='https://search.vaibhavrane.me/'>
+									Try my search
+								</a>
 							</li>
 						</Scrollspy>
 					</div>
@@ -103,8 +115,22 @@ const Header = () => {
 									</a>
 								</li>
 								<li>
+									<a href='#blog' onClick={handleClick}>
+										Blog
+									</a>
+								</li>
+								<li>
 									<a href='#contact' onClick={handleClick}>
 										Socials
+									</a>
+								</li>
+								<li>
+									<a
+										className='white-fill-bg btn-outline btn_sm'
+										target='_blank'
+										rel='noreferrer'
+										href='https://search.vaibhavrane.me/'>
+										Try my search
 									</a>
 								</li>
 							</ul>

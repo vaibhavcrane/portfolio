@@ -48,9 +48,12 @@ const About = () => {
 									<p>
 										I like to solve problems and optimizing processes make
 										things simpler. Nothing gives me more joy than to see my
-										solutions benefit my customers and partners. I am intrigued
-										by technology and the way it can be used our eveyday lives
-										to make it simpler.
+										solutions benefit my customers and partners.
+									</p>
+									<p>
+										I am intrigued by technology and the way it can be used our
+										eveyday lives to make it simpler. I am an avid fan of
+										Formula 1.
 									</p>
 								</div>
 								<div

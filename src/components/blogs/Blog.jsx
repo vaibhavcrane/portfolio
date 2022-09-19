@@ -22,7 +22,7 @@ const Blog = () => {
 	}
 
 	return (
-		<div className='shane_tm_section' id='news'>
+		<div className='shane_tm_section' id='blog'>
 			<div className='shane_tm_news'>
 				<div className='container'>
 					<div className='shane_tm_title'>
