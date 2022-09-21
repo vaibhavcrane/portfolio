@@ -35,19 +35,19 @@ const Header = () => {
 							currentClassName='current'
 							offset={-200}>
 							<li>
-								<a href='#home'>Home</a>
+								<a href='/#home'>Home</a>
 							</li>
 							<li>
-								<a href='#about'>About</a>
+								<a href='/#about'>About</a>
 							</li>
 							<li>
-								<a href='#experience'>Experience</a>
+								<a href='/#experience'>Experience</a>
 							</li>
 							<li>
-								<a href='#blog'>Blog</a>
+								<a href='/#blog'>Blog</a>
 							</li>
 							<li>
-								<a href='#contact'>Socials</a>
+								<a href='/#contact'>Socials</a>
 							</li>
 							<li>
 								<a

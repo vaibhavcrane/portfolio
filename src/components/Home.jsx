@@ -7,9 +7,10 @@ import Experience from "./experience/Experience";
 import Video from "./video/Video";
 import Brand from "./BrandAnimation";
 import Testimonial from "./testimonial/Testimonial";
-import Blog from "./blogs/Blog";
+import Blog from "./blog/Blog";
 import CallToAction from "./calltoactions/CallToAction";
 import Footer from "./footer/Footer";
+import { BrowserRouter, Route } from "react-router-dom";
 
 const Home = () => {
 	return (
