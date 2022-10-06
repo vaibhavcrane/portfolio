@@ -1,0 +1,7 @@
+// Style Scss
+@import "main/typography";
+@import "main/color";
+@import "main/style";
+
+/*! purgecss start ignore */
+@import "aos/src/sass/aos.scss"; /*! purgecss end ignore */
