@@ -1,7 +1,6 @@
 import React, { useCallback } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
-import { TextLoop } from "react-text-loop-next";
 
 const Slider = () => {
 	const particlesInit = useCallback(async (engine) => {
