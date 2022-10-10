@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Scrollspy from "react-scrollspy";
 import Social from "./social";
+import Link from "next/link";
 
 const Header = () => {
 	const [click, setClick] = useState(false);
@@ -24,7 +25,9 @@ const Header = () => {
 			<div className='topbar'>
 				<div className={navbar ? "topbar_inner opened" : "topbar_inner"}>
 					<div className='logo'>
-						<img src='/img/logo/logo.png' alt='vr' />
+						<Link href='/'>
+							<img src='/img/logo/logo.png' alt='vr' />
+						</Link>
 					</div>
 					{/* End logo */}
 					<div className='menu'>
@@ -34,16 +37,16 @@ const Header = () => {
 							currentClassName='current'
 							offset={-200}>
 							<li>
-								<a href='#home'>Home</a>
+								<Link href='/#home'>Home</Link>
 							</li>
 							<li>
-								<a href='#about'>About</a>
+								<Link href='/#about'>About</Link>
 							</li>
 							<li>
-								<a href='#experience'>Experience</a>
+								<Link href='/#experience'>Experience</Link>
 							</li>
 							<li>
-								<a href='#blog'>Blog</a>
+								<Link href='/blogs'>Blog</Link>
 							</li>
 							<li>
 								<a
@@ -67,7 +70,9 @@ const Header = () => {
 					<div className='container bigger'>
 						<div className='topbar_in'>
 							<div className='logo'>
-								<img src='/img/logo/dark.png' alt='partners brand' />
+								<Link href='/'>
+									<img src='/img/logo/dark.png' alt='partners brand' />
+								</Link>
 							</div>
 							{/* End logo */}
 							<div className='my_trigger' onClick={handleClick}>
@@ -94,24 +99,24 @@ const Header = () => {
 						<div className='dropdown_inner'>
 							<ul className='anchor_nav'>
 								<li className='current'>
-									<a href='#home' onClick={handleClick}>
-										Home
-									</a>
+									<Link href='/#home'>
+										<a onClick={handleClick}>Home</a>
+									</Link>
 								</li>
 								<li>
-									<a href='#about' onClick={handleClick}>
-										About
-									</a>
+									<Link href='/#about'>
+										<a onClick={handleClick}>About</a>
+									</Link>
 								</li>
 								<li>
-									<a href='#experience' onClick={handleClick}>
-										Experience
-									</a>
+									<Link href='/#experience'>
+										<a onClick={handleClick}>Experience</a>
+									</Link>
 								</li>
 								<li>
-									<a href='#blog' onClick={handleClick}>
-										Blog
-									</a>
+									<Link href='/blogs'>
+										<a onClick={handleClick}>Blogme</a>
+									</Link>
 								</li>
 								<li>
 									<a

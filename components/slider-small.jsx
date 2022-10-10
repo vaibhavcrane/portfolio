@@ -12,8 +12,8 @@ const Slider = () => {
 
 	return (
 		<div className='slider'>
-			<div className='hero' id='home' data-style='one'>
-				<div className='frame-layout__particles'>
+			<div className='hero_small'>
+				<div className='frame-layout__particles_small'>
 					<Particles
 						id='tsparticles'
 						init={particlesInit}
@@ -110,30 +110,6 @@ const Slider = () => {
 						}}></div>
 				</div>
 				{/* End .background */}
-
-				<div className='container'>
-					<div className='content'>
-						<div className='name_wrap'>
-							<h3>
-								<span>Hello, I am</span>
-							</h3>
-							<br />
-							<h2>
-								<span>Vaibhav</span>
-							</h2>
-						</div>
-						{/* End title */}
-
-						<div className='job_wrap'>
-							<span className='job'>
-								curiosity drives me
-								{/* <span className='overlay_effect'></span> */}
-							</span>
-						</div>
-						{/* End designation */}
-					</div>
-					{/* End content */}
-				</div>
 				{/* End .container */}
 			</div>
 		</div>

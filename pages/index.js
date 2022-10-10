@@ -4,20 +4,37 @@ import Experience from "../components/experience";
 import Footer from "../components/footer";
 import ScrollToTop from "../components/scroll-to-top";
 import Header from "../components/header";
+import Blog from "../components/blog";
+import { getRecentPosts } from "../services";
+import Head from "next/head";
 
 const Slider = dynamic(() => import("../components/slider"), { ssr: false });
 
-export default function Home() {
+export default function Home({ posts }) {
 	return (
-		<div className='all_wrap'>
-			<ScrollToTop />
-			<div className='home'>
-				<Header />
-				<Slider />
-				<About />
-				<Experience />
-				<Footer />
+		<>
+			<Head>
+				<title>Vaibhav Rane | Portfolio</title>
+				<meta name='description' content="Vaibhav Rane's Portfolio" />
+			</Head>
+			<div className='all_wrap'>
+				<ScrollToTop />
+				<div className='home'>
+					<Header />
+					<Slider />
+					<About />
+					<Experience />
+					<Blog posts={posts} />
+					<Footer />
+				</div>
 			</div>
-		</div>
+		</>
 	);
+}
+
+export async function getStaticProps() {
+	const posts = (await getRecentPosts()) || [];
+	return {
+		props: { posts },
+	};
 }

@@ -572,17 +572,17 @@ h6 {
 }
 .hero_small {
 	width: 100%;
-	height: 25vh;
+	height: 30vh;
 	float: left;
 	clear: both;
 	position: relative;
 	overflow: hidden;
 	@media screen and (max-width: 1040px) {
-		height: 60vh;
+		height: 30vh;
 	}
 	@media screen and (max-width: 767px) {
-		height: auto;
-		padding: 240px 0;
+		visibility: hidden;
+		height: 0px;
 	}
 	.container {
 		position: static;
@@ -617,12 +617,24 @@ h6 {
 	background-position: center center;
 	background-size: cover;
 }
+.hero_small {
+	@media screen and (max-width: 767px) {
+		visibility: hidden;
+		height: 0px;
+		display: none;
+	}
+}
+
 .hero_small .background {
 	position: absolute;
 	right: 0px;
 	top: 0px;
 	bottom: 0px;
 	width: 100%;
+	@media screen and (max-width: 767px) {
+		visibility: hidden;
+		height: 0px;
+	}
 }
 .hero_small .image {
 	position: absolute;
@@ -633,6 +645,10 @@ h6 {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
+	@media screen and (max-width: 767px) {
+		visibility: hidden;
+		height: 0px;
+	}
 }
 .hero[data-style="one"] .background {
 	clip-path: polygon(0% 100%, 21% 0%, 100% 0%, 100% 100%);
@@ -707,6 +723,10 @@ h6 {
 }
 .hero_small .container {
 	height: 100%;
+	@media screen and (max-width: 767px) {
+		visibility: hidden;
+		height: 0px;
+	}
 }
 
 .hero_small .content {
@@ -714,6 +734,10 @@ h6 {
 	top: 60%;
 	transform: translateY(-50%);
 	padding-right: 20px;
+	@media screen and (max-width: 767px) {
+		visibility: hidden;
+		height: 0px;
+	}
 }
 .hero_small .name_wrap {
 	width: 100%;
@@ -721,12 +745,20 @@ h6 {
 	clear: both;
 	float: left;
 	margin-bottom: 0;
+	@media screen and (max-width: 767px) {
+		visibility: hidden;
+		height: 0px;
+	}
 }
 .hero_small .job_wrap {
 	width: 100%;
 	height: auto;
 	clear: both;
 	float: left;
+	@media screen and (max-width: 767px) {
+		visibility: hidden;
+		height: 0px;
+	}
 }
 .hero_small .content h3 {
 	position: relative;
@@ -738,6 +770,10 @@ h6 {
 	line-height: 1.2;
 	display: inline-block;
 	overflow: hidden;
+	@media screen and (max-width: 767px) {
+		visibility: hidden;
+		height: 0px;
+	}
 }
 .hero_small .content h3 span {
 	color: transparent;
@@ -745,6 +781,35 @@ h6 {
 	padding-left: 2px;
 	@media screen and (max-width: 767px) {
 		-webkit-text-stroke: 1px #fff;
+	}
+	@media screen and (max-width: 767px) {
+		visibility: hidden;
+		height: 0px;
+	}
+}
+.hero_small .content h2 {
+	position: relative;
+	font-size: 36px;
+	font-family: "Poppins";
+	text-transform: uppercase;
+	font-weight: 900;
+	color: #000;
+	line-height: 1.2;
+	display: inline-block;
+	overflow: hidden;
+	@media screen and (max-width: 767px) {
+		visibility: hidden;
+		height: 0px;
+	}
+}
+.hero_small .content h2 span {
+	color: transparent;
+	-webkit-text-stroke: 1px #000;
+	padding-left: 2px;
+	@media screen and (max-width: 767px) {
+		-webkit-text-stroke: 1px #fff;
+		visibility: hidden;
+		height: 0px;
 	}
 }
 .hero_small .content .job {
@@ -755,6 +820,10 @@ h6 {
 	position: relative;
 	overflow: hidden;
 	color: #555;
+	@media screen and (max-width: 767px) {
+		visibility: hidden;
+		height: 0px;
+	}
 }
 .overlay_effect {
 	position: absolute;
@@ -888,6 +957,90 @@ body.loaded .overlay_effect:after {
 
 .down[data-skin="light"] .line_wrapper:before {
 	background-color: #fff;
+}
+
+.home {
+	.hero .background {
+		width: 100% !important;
+	}
+	.hero .image {
+		background-position: 100% 12%;
+	}
+	@media (max-width: 1040px) {
+		.hero .image {
+			background-position: 71% 100%;
+		}
+	}
+
+	.hero[data-style="one"] .background {
+		-webkit-clip-path: none !important;
+		clip-path: none !important;
+	}
+	.hero .content h3 span {
+		-webkit-text-stroke: 1px #fff;
+	}
+	.hero .content h3 {
+		color: #fff;
+		position: relative;
+		overflow: hidden;
+	}
+	// .topbar .topbar_inner .logo a img {
+	// 	filter: invert(1);
+	// }
+
+	.topbar .menu ul li a {
+		color: #fff;
+	}
+	.topbar .menu ul li.current a {
+		color: #efefef;
+	}
+	.topbar .topbar_inner.opened {
+		background-color: #000;
+	}
+	.topbar .topbar_inner {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.hero .content .job {
+		font-weight: 700;
+		font-size: 35px;
+		font-family: "Montserrat";
+		color: #fff;
+		padding: 8px 0px 10px;
+		@media (max-width: 1040px) {
+			font-size: 20px;
+			font-weight: 600;
+			padding: 8px 0 0;
+		}
+	}
+	.hero .content {
+		z-index: 3;
+	}
+
+	.hero .content h3 {
+		line-height: 1.3;
+	}
+	@media screen and (max-width: 767px) {
+		.hero .content h3 {
+			font-size: 40px;
+		}
+		.hero .content .job {
+			font-size: 25px;
+			padding-top: 0;
+		}
+	}
+	.hero .content h2 {
+		line-height: 1.3;
+	}
+	@media screen and (max-width: 767px) {
+		.hero .content h2 {
+			font-size: 56px;
+		}
+		.hero .content .job {
+			font-size: 25px;
+			padding-top: 0;
+		}
+	}
 }
 
 // Particle CSS
@@ -1735,5 +1888,251 @@ body.intro .loader_line:after {
 			filter: invert(1);
 			z-index: 4;
 		}
+	}
+}
+
+//Blog
+
+.blog {
+	display: grid;
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 50px 0px 90px 0px;
+	@media screen and (max-width: 992px) {
+		padding: 60px 0px 10px;
+	}
+
+	.centered {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.blogs {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	padding: 50px 0px 0px 0px;
+
+	@media screen and (max-width: 767px) {
+		grid-template-columns: 1fr;
+	}
+	.blog-image {
+		display: block;
+		height: 18rem;
+		position: relative;
+		// border-radius: 0.25rem;
+		line-height: 1.375;
+		// border-left-width: 8px;
+		// border-color: #34d399;
+		// padding: 5px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			// padding: 5px;
+			transition: transform 0.5s ease;
+		}
+
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	.blog-title {
+		display: flex;
+		position: relative;
+		height: 100%;
+		justify-content: flex-start;
+		align-items: flex-end;
+		text-align: left;
+		// padding-right: 1rem;
+		// padding-left: 1rem;
+		text-decoration: none;
+		padding-top: 10px;
+		@media screen and (max-width: 767px) {
+			padding-top: 0px;
+		}
+	}
+}
+
+.blogs-page {
+	padding: 150px 0px;
+
+	.blogs-section {
+		margin-top: 150px;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 30px;
+		padding: 50px;
+
+		@media screen and (max-width: 767px) {
+			margin-top: 0px;
+			padding: 0px 30px;
+			align-items: center;
+		}
+	}
+
+	.blog-post {
+		display: grid;
+		grid-template-columns: 400px 1fr;
+		gap: 30px;
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+		@media screen and (max-width: 767px) {
+			grid-template-columns: 1fr;
+		}
+
+		@media screen and (min-width: 768px) and (max-width: 992px) {
+			grid-template-columns: 300px 1fr;
+		}
+
+		.blog-image {
+			display: block;
+			overflow: hidden;
+			img {
+				height: auto;
+				width: auto;
+				cursor: pointer;
+				transition: transform 0.5s ease;
+				@media screen and (max-width: 767px) {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+
+		.blog-title {
+			display: block;
+			position: relative;
+			height: 100%;
+			justify-content: flex-start;
+			align-items: flex-start;
+			text-align: left;
+			text-decoration: none;
+			padding-top: 10px;
+			h3 {
+				cursor: pointer;
+				font-family: "Poppins";
+				font-weight: 500;
+			}
+			p {
+				font-family: "Poppins";
+				font-weight: 400;
+				font-size: 16px;
+				color: #222;
+			}
+		}
+	}
+}
+
+.hero_blog-page {
+	width: 100%;
+	height: 40vh;
+	float: left;
+	clear: both;
+	position: relative;
+	overflow: hidden;
+	@media screen and (max-width: 1040px) {
+		height: 60vh;
+	}
+	@media screen and (max-width: 767px) {
+		height: auto;
+		padding: 240px 0;
+	}
+	.container {
+		position: static;
+	}
+}
+
+.hero_blog-page .background {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 100%;
+}
+.hero_blog-page .image {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+
+	@media screen and (min-width: 1041px) {
+		filter: brightness(0.5);
+	}
+}
+
+.blog-content .title {
+	padding-top: 40px;
+	text-align: center;
+	h1 {
+		font-family: "Poppins";
+		font-weight: 500;
+		font-size: 40px;
+		margin-bottom: 20px;
+		@media screen and (max-width: 767px) {
+			font-size: 30px;
+		}
+	}
+}
+
+.blog-content .date {
+	text-align: center;
+	padding-bottom: 20px;
+	p {
+		font-family: "Poppins";
+		font-weight: 400;
+		font-size: 12px;
+		color: #222;
+	}
+}
+.blog-content .description {
+	text-align: center;
+	p {
+		font-family: "Poppins";
+		font-weight: 400;
+		font-size: 16px;
+		color: #222;
+	}
+}
+
+.blog-content .content {
+	text-align: left;
+	padding: 20px 20px 50px 20px;
+	p {
+		font-family: "Poppins";
+		font-weight: 400;
+		font-size: 16px;
+		color: #222;
+	}
+
+	h1 {
+		font-family: "Poppins";
+		font-weight: 500;
+		font-size: 30px;
+		margin-top: 10px;
+		@media screen and (max-width: 767px) {
+			font-size: 20px;
+		}
+	}
+
+	@media screen and (min-width: 767px) {
+		padding: 20px 150px 50px 150px;
 	}
 }
