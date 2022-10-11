@@ -762,11 +762,11 @@ h6 {
 }
 .hero_small .content h3 {
 	position: relative;
-	font-size: 36px;
+	font-size: 56px;
 	font-family: "Poppins";
 	text-transform: uppercase;
-	font-weight: 900;
-	color: #000;
+	font-weight: 700;
+	color: #fff;
 	line-height: 1.2;
 	display: inline-block;
 	overflow: hidden;
@@ -777,7 +777,6 @@ h6 {
 }
 .hero_small .content h3 span {
 	color: transparent;
-	-webkit-text-stroke: 1px #000;
 	padding-left: 2px;
 	@media screen and (max-width: 767px) {
 		-webkit-text-stroke: 1px #fff;

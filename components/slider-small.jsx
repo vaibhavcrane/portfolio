@@ -109,6 +109,13 @@ const Slider = () => {
 						}}></div>
 				</div>
 				{/* End .background */}
+				<div className='container'>
+					<div className='content'>
+						<div className='name_wrap'>
+							<h3>Blog</h3>
+						</div>
+					</div>
+				</div>
 				{/* End .container */}
 			</div>
 		</div>
