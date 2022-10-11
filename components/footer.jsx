@@ -28,7 +28,6 @@ const Footer = () => {
 				{/* End shape */}
 
 				<div className='background' id='talk'>
-					<a className='player'></a>
 					<div className='overlay'></div>
 				</div>
 				{/* End background */}
