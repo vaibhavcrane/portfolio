@@ -7,8 +7,7 @@ import Header from "../components/header";
 import Blog from "../components/blog";
 import { getRecentPosts } from "../services";
 import Head from "next/head";
-
-const Slider = dynamic(() => import("../components/slider"), { ssr: false });
+import Slider from "../components/slider";
 
 export default function Home({ posts }) {
 	return (
