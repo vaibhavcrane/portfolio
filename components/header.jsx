@@ -115,7 +115,7 @@ const Header = () => {
 								</li>
 								<li>
 									<Link href='/blogs'>
-										<a onClick={handleClick}>Blogme</a>
+										<a onClick={handleClick}>Blog</a>
 									</Link>
 								</li>
 								<li>
