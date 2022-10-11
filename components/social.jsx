@@ -1,13 +1,14 @@
 import React from "react";
 
 const SocialShare = [
+	{ iconName: "linkedin", link: "https://linkedin.com/in/vaibhavcrane" },
+	{ iconName: "github", link: "https://github.com/vaibhavcrane" },
 	{ iconName: "twitter", link: "https://twitter.com/vaibhavcrane" },
 	{
 		iconName: "instagram",
 		link: "https://www.instagram.com/vaibhavcrane",
 	},
 	{ iconName: "youtube", link: "https://youtube.com/vaibhav0820" },
-	{ iconName: "linkedin", link: "https://linkedin.com/in/vaibhavcrane" },
 ];
 const Social = () => {
 	return (
