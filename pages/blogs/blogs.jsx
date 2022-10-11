@@ -8,7 +8,7 @@ export default function Blogs({ posts }) {
 				<title>Vaibhav Rane | Blog</title>
 				<meta name='description' content="Vaibhav Rane's Blog" />
 			</Head>
-			<div className='blogs-page'>
+			<div className='blogs-page' id='blog'>
 				<div className='container'>
 					<div className='blogs-section'>
 						{posts &&
