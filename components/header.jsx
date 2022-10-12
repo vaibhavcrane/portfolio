@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import Scrollspy from "react-scrollspy";
 import Social from "./social";
 import Link from "next/link";
+import logo from "../public/img/logo/logo.png";
+import logo_dark from "../public/img/logo/dark.png";
+import Image from "next/image";
 
 const Header = () => {
 	const [click, setClick] = useState(false);
@@ -26,7 +29,7 @@ const Header = () => {
 				<div className={navbar ? "topbar_inner opened" : "topbar_inner"}>
 					<div className='logo'>
 						<Link href='/'>
-							<img src='/img/logo/logo.png' alt='vr' />
+							<Image src={logo} alt='vr' />
 						</Link>
 					</div>
 					{/* End logo */}
@@ -53,7 +56,7 @@ const Header = () => {
 									className='white-fill-bg btn-outline btn_sm'
 									target='_blank'
 									rel='noopener noreferrer'
-									href='https://search.vaibhrane.me'>
+									href='https://search.vaibhavrane.me'>
 									Try My Search
 								</a>
 							</li>
@@ -71,7 +74,7 @@ const Header = () => {
 						<div className='topbar_in'>
 							<div className='logo'>
 								<Link href='/'>
-									<img src='/img/logo/dark.png' alt='partners brand' />
+									<Image src={logo_dark} alt='vr' />
 								</Link>
 							</div>
 							{/* End logo */}

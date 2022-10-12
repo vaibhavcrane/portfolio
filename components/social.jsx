@@ -20,7 +20,8 @@ const Social = () => {
 							<img
 								className='svg'
 								src={`/img/svg/social/${val.iconName}.svg`}
-								alt='social'></img>
+								alt='social'
+							/>
 						</a>
 					</li>
 				))}
