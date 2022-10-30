@@ -30,8 +30,6 @@ export default function Profile() {
 	return (
 		<>
 			<Head>
-				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<meta charSet='utf-8' />
 				<meta name='description' content='Breaking Bad quotes for D' />
 				<title>Breaking Bad Quotes for D</title>
 			</Head>
