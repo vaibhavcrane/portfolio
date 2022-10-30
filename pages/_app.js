@@ -11,13 +11,6 @@ function MyApp({ Component, pageProps }) {
 
 	return (
 		<>
-			<Head>
-				<title>Vaibhav Rane | Portfolio</title>
-				<meta
-					name='description'
-					content='Vaibhav Rane is a MBA graduate from Schulich School of Business.'
-				/>
-			</Head>
 			<Component {...pageProps} />
 		</>
 	);
