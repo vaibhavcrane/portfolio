@@ -2280,18 +2280,14 @@ section {
 .brba-quotes {
 	margin-top: 150px;
 	padding: 100px 0px 100px 0px;
-	position: relative;
 	width: auto;
-	height: 700px;
 	align-items: center;
 
 	h2 {
 		margin: 0;
-		left: calc(50% + 130px);
-		font-size: 56px;
-		font-weight: 700;
-		letter-spacing: -3px;
+		text-align: right;
+		font-size: 34px;
+		font-weight: 500;
 		line-height: 1.2;
-		position: absolute;
 	}
 }
