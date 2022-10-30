@@ -39,6 +39,14 @@ export default function TheOffice() {
 			<Head>
 				<meta name='description' content='The Office Quotes' />
 				<title>The Office Quotes</title>
+				{/* <meta property='og:image' content={previewImage} key='ogimage' /> */}
+				<meta property='og:site_name' content='Vaibhav Rane' key='ogsitename' />
+				<meta property='og:title' content='The Office Quotes' key='ogtitle' />
+				<meta
+					property='og:description'
+					content='The Office Quotes'
+					key='ogdesc'
+				/>
 			</Head>
 			<div className='home'>
 				<div className='slider'>
