@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import Head from "next/head";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
-const cors = require("cors");
 
 export default function TheOffice() {
 	const particlesInit = useCallback(async (engine) => {
@@ -15,12 +14,16 @@ export default function TheOffice() {
 
 	useEffect(() => {
 		setLoading(true);
-		fetch("https://officeapi.dev/api/quotes/random", {
-			headers: {
-				"Access-Control-Allow-Origin": "*",
-			},
-		})
-			// .then((res) => res.json())
+		fetch(
+			"https://cors-anywhere.herokuapp.com/https://officeapi.dev/api/quotes/random",
+			{
+				method: "GET",
+				headers: {
+					"Content-Type": "application/json",
+				},
+			}
+		)
+			.then((res) => res.json())
 			.then((data) => {
 				setData(data);
 				console.log(data);
@@ -133,7 +136,7 @@ export default function TheOffice() {
 							<div
 								className='image'
 								style={{
-									backgroundImage: `url(${"/img/breaking-bad/background.jpg"})`,
+									backgroundImage: `url(${"/img/the-office/background.jpg"})`,
 								}}></div>
 						</div>
 						{/* End .background */}
@@ -142,14 +145,15 @@ export default function TheOffice() {
 							<div className='content'>
 								<div className='name_wrap'>
 									<h2>
-										<span>{data[0].quote}</span>
+										<span>{data.data.content}</span>
 									</h2>
 								</div>
 								{/* End title */}
 
 								<div className='job_wrap'>
 									<span className='job'>
-										- {data[0].author}
+										- {data.data.character.firstname}{" "}
+										{data.data.character.lastname}
 										{/* <span className='overlay_effect'></span> */}
 									</span>
 								</div>
