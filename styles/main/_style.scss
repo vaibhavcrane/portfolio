@@ -571,6 +571,7 @@ h6 {
 		position: static;
 	}
 }
+
 .hero_small {
 	width: 100%;
 	height: 30vh;
@@ -2277,17 +2278,34 @@ section {
 	}
 }
 
-.brba-quotes {
-	margin-top: 150px;
-	padding: 100px 0px 100px 0px;
-	width: auto;
-	align-items: center;
-
-	h2 {
-		margin: 0;
-		text-align: right;
-		font-size: 34px;
-		font-weight: 500;
-		line-height: 1.2;
+.breaking-bad {
+	@media screen and (max-width: 1040px) {
+		height: 100vh;
+	}
+	@media screen and (max-width: 767px) {
+		height: 100vh;
+	}
+	.container {
+		position: static;
+		.content {
+			h2 {
+				font-size: 36px;
+				text-transform: none;
+				font-family: Poppins;
+				font-weight: 400;
+				line-height: 1.2;
+				max-width: 1200px;
+				@media screen and (max-width: 767px) {
+					font-size: 24px;
+					width: 90%;
+				}
+			}
+			.job {
+				float: right;
+				@media screen and (max-width: 767px) {
+					float: none;
+				}
+			}
+		}
 	}
 }
