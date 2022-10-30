@@ -52,6 +52,9 @@ const Header = () => {
 								<Link href='/blogs'>Blog</Link>
 							</li>
 							<li>
+								<Link href='/gallery'>Gallery</Link>
+							</li>
+							<li>
 								<a
 									className='white-fill-bg btn-outline btn_sm'
 									target='_blank'
@@ -119,6 +122,11 @@ const Header = () => {
 								<li>
 									<Link href='/blogs'>
 										<a onClick={handleClick}>Blog</a>
+									</Link>
+								</li>
+								<li>
+									<Link href='/gallery'>
+										<a onClick={handleClick}>Gallery</a>
 									</Link>
 								</li>
 								<li>

@@ -19,7 +19,7 @@ export default function Blog({ posts }) {
 			<ScrollToTop />
 			<div className='home'>
 				<Header />
-				<Slider />
+				<Slider page_title={"Blog"} />
 				<Blogs posts={posts} />
 				<Footer />
 			</div>

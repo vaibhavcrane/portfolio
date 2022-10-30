@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 
-const Slider = () => {
+const Slider = ({ page_title }) => {
 	const particlesInit = useCallback(async (engine) => {
 		await loadFull(engine);
 	}, []);
@@ -112,7 +112,7 @@ const Slider = () => {
 				<div className='container'>
 					<div className='content'>
 						<div className='name_wrap'>
-							<h3>Blog</h3>
+							<h3>{page_title}</h3>
 						</div>
 					</div>
 				</div>

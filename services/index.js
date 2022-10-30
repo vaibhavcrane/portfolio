@@ -1,6 +1,9 @@
 import { GraphQLClient, gql } from "graphql-request";
+const axios = require("axios");
 
 const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT);
+
+const gallerycms = new GraphQLClient(process.env.GALLERY_URL_ENDPOINT);
 
 export const getPosts = async () => {
 	const query = gql`
@@ -70,4 +73,22 @@ export const getSinglePost = async (slug) => {
 	`;
 	const result = await graphcms.request(query, { slug });
 	return result.blog;
+};
+
+export const getGallery = async () => {
+	const query = gql`
+		query getGallery {
+			galleries {
+				image {
+					url
+				}
+				description
+				location
+				dateTaken
+				id
+			}
+		}
+	`;
+	const result = await gallerycms.request(query);
+	return result.galleries;
 };
