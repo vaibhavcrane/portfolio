@@ -2,8 +2,9 @@ import React, { useState, useEffect, useCallback } from "react";
 import Head from "next/head";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
+const cors = require("cors");
 
-export default function BreakingBad() {
+export default function TheOffice() {
 	const particlesInit = useCallback(async (engine) => {
 		await loadFull(engine);
 	}, []);
@@ -14,10 +15,15 @@ export default function BreakingBad() {
 
 	useEffect(() => {
 		setLoading(true);
-		fetch("https://api.breakingbadquotes.xyz/v1/quotes")
-			.then((res) => res.json())
+		fetch("https://officeapi.dev/api/quotes/random", {
+			headers: {
+				"Access-Control-Allow-Origin": "*",
+			},
+		})
+			// .then((res) => res.json())
 			.then((data) => {
 				setData(data);
+				console.log(data);
 				setLoading(false);
 			});
 	}, []);
@@ -28,8 +34,8 @@ export default function BreakingBad() {
 	return (
 		<>
 			<Head>
-				<meta name='description' content='Breaking Bad quotes for D' />
-				<title>Breaking Bad Quotes for D</title>
+				<meta name='description' content='The Office Quotes' />
+				<title>The Office Quotes</title>
 			</Head>
 			<div className='home'>
 				<div className='slider'>
