@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
+import { Typewriter } from "react-simple-typewriter";
 
 const Slider = () => {
 	const particlesInit = useCallback(async (engine) => {
@@ -118,7 +119,17 @@ const Slider = () => {
 							</h3>
 							<br />
 							<h2>
-								<span>Vaibhav</span>
+								<span>
+									<Typewriter
+										words={["Vaibhav Rane", "an Engineer", "a Problem Solver"]}
+										loop={0}
+										cursor
+										cursorStyle='_'
+										typeSpeed={70}
+										deleteSpeed={50}
+										delaySpeed={2000}
+									/>
+								</span>
 							</h2>
 						</div>
 						{/* End title */}
