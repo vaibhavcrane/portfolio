@@ -3,6 +3,7 @@ import Aos from "aos";
 // import "aos/dist/aos.css";
 import "../styles/style.scss";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }) {
 	useEffect(() => {
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }) {
 				<meta charSet='utf-8' />
 			</Head>
 			<Component {...pageProps} />
+			<Analytics />
 		</>
 	);
 }
