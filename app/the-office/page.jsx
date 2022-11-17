@@ -4,11 +4,14 @@ import Head from "next/head";
 async function fetchData() {
 	const res = await fetch("https://officeapi.dev/api/quotes/random");
 	const json = await res.json();
+	console.log(json);
 	return json;
 }
 
 export default async function TheOffice() {
-	const data = await fetchData();
+	const res = await fetch("https://officeapi.dev/api/quotes/random");
+	const data = await res.json();
+	console.log(data);
 
 	return (
 		<>
