@@ -40,13 +40,13 @@ const Header = () => {
 							currentClassName='current'
 							offset={-200}>
 							<li>
-								<Link href='/#home'>Home</Link>
+								<Link href='#home'>Home</Link>
 							</li>
 							<li>
-								<Link href='/#about'>About</Link>
+								<Link href='#about'>About</Link>
 							</li>
 							<li>
-								<Link href='/#experience'>Experience</Link>
+								<Link href='#experience'>Experience</Link>
 							</li>
 							<li>
 								<Link href='/blogs'>Blog</Link>
