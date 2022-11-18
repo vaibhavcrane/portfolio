@@ -8,25 +8,45 @@ import {
 	MotionValue,
 } from "framer-motion";
 import Head from "next/head";
+import ScrollToTop from "../../components/scroll-to-top";
+import { getGallery } from "../../services";
+
+export async function getStaticProps() {
+	const gallery = (await getGallery()) || [];
+	console.log(gallery);
+	return {
+		props: { gallery },
+	};
+}
 
 function useParallax(value: MotionValue<number>, distance: number) {
 	return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-function ImageOnScreen({ id }: { id: number }) {
+function ImageOnScreen({
+	imageURL,
+	description,
+	location,
+	dateTaken,
+	imageId,
+}) {
 	const ref = useRef(null);
 	const { scrollYProgress } = useScroll({ target: ref });
 	const y = useParallax(scrollYProgress, 300);
 	return (
 		<section className='gallery'>
-			<div ref={ref}>
-				<img src={`/img/gallery/${id}.jpg`} alt='A London skyscraper' />
+			<div className='gallery-image' ref={ref}>
+				<img src={imageURL} alt={description} />
 			</div>
-			<motion.h2 style={{ y }}>{`#00${id}`}</motion.h2>
+			<motion.div style={{ y }} className='gallery-text'>
+				<h2>{`#00${imageId}`}</h2>
+				<p className='description'>{location}</p>
+				<p className='date-taken'>{dateTaken}</p>
+			</motion.div>
 		</section>
 	);
 }
-const Gallery = () => {
+const Gallery = ({ gallery }) => {
 	const { scrollYProgress } = useScroll();
 	const scaleX = useSpring(scrollYProgress, {
 		stiffness: 100,
@@ -40,11 +60,18 @@ const Gallery = () => {
 				<title>Vaibhav Rane | Gallery</title>
 				<meta name='description' content="Vaibhav Rane's Photo Gallery" />
 			</Head>
-			<div className='scroll-snap all-wrap gallery-wrapper'>
-				{/* <Header /> */}
+			<div className='all-wrap gallery-wrapper scroll-container'>
+				<ScrollToTop />
 				{/* <Slider page_title='Gallery' /> */}
-				{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((image) => (
-					<ImageOnScreen key={image} id={image} />
+				{gallery.map((i) => (
+					<ImageOnScreen
+						key={i}
+						imageURL={i.image.url}
+						description={i.description}
+						location={i.location}
+						dateTaken={i.dateTaken}
+						imageId={i.imageId}
+					/>
 				))}
 				<motion.div className='progress' style={{ scaleX }} />
 				<div className='gallery-button'>

@@ -78,7 +78,7 @@ export const getSinglePost = async (slug) => {
 export const getGallery = async () => {
 	const query = gql`
 		query getGallery {
-			galleries {
+			galleries(first: 100, orderBy: imageId_DESC) {
 				image {
 					url
 				}
@@ -86,6 +86,7 @@ export const getGallery = async () => {
 				location
 				dateTaken
 				id
+				imageId
 			}
 		}
 	`;
