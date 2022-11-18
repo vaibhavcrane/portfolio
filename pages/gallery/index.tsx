@@ -10,6 +10,7 @@ import {
 import Head from "next/head";
 import ScrollToTop from "../../components/scroll-to-top";
 import { getGallery } from "../../services";
+import useScrollSnap from "react-use-scroll-snap";
 
 function formattedNumber(value: number) {
 	if (value < 10) {
@@ -56,6 +57,9 @@ function ImageOnScreen({
 	);
 }
 const Gallery = ({ gallery }) => {
+	const scrollRef = useRef(null);
+	useScrollSnap({ ref: scrollRef, duration: 50, delay: 0 });
+
 	const { scrollYProgress } = useScroll();
 	const scaleX = useSpring(scrollYProgress, {
 		stiffness: 100,
@@ -69,19 +73,21 @@ const Gallery = ({ gallery }) => {
 				<title>Vaibhav Rane | Gallery</title>
 				<meta name='description' content="Vaibhav Rane's Photo Gallery" />
 			</Head>
-			<div className='all-wrap gallery-wrapper scroll-container'>
+			<div className='all-wrap gallery-wrapper'>
 				<ScrollToTop />
 				{/* <Slider page_title='Gallery' /> */}
-				{gallery.map((i) => (
-					<ImageOnScreen
-						key={i}
-						imageURL={i.image.url}
-						description={i.description}
-						location={i.location}
-						dateTaken={i.dateTaken}
-						imageId={i.imageId}
-					/>
-				))}
+				<div ref={scrollRef}>
+					{gallery.map((i) => (
+						<ImageOnScreen
+							key={i.imageId}
+							imageURL={i.image.url}
+							description={i.description}
+							location={i.location}
+							dateTaken={i.dateTaken}
+							imageId={i.imageId}
+						/>
+					))}
+				</div>
 				<motion.div className='progress' style={{ scaleX }} />
 				<div className='gallery-button'>
 					<a className='white-fill-bg btn-outline' href={"/"}>

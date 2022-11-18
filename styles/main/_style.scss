@@ -2328,7 +2328,7 @@ body.intro .loader_line:after {
 		max-height: 90vh;
 		margin: 20px;
 		background: var(--white);
-		overflow: hidden;
+		// overflow: hidden;
 		@media screen and (max-width: 767px) {
 			width: 450px;
 			height: 450px;

@@ -2,9 +2,6 @@ import React, { useState, useEffect } from "react";
 import Scrollspy from "react-scrollspy";
 import Social from "./social";
 import Link from "next/link";
-import logo from "../public/img/logo/logo.png";
-import logo_dark from "../public/img/logo/dark.png";
-import Image from "next/image";
 
 const Header = () => {
 	const [click, setClick] = useState(false);
@@ -29,7 +26,7 @@ const Header = () => {
 				<div className={navbar ? "topbar_inner opened" : "topbar_inner"}>
 					<div className='logo'>
 						<Link href='/'>
-							<Image src={logo} alt='vr' />
+							<img src='/img/logo/logo.png' alt='vr' />
 						</Link>
 					</div>
 					{/* End logo */}
@@ -77,7 +74,7 @@ const Header = () => {
 						<div className='topbar_in'>
 							<div className='logo'>
 								<Link href='/'>
-									<Image src={logo_dark} alt='vr' />
+									<img src='/img/logo/dark.png' alt='vr' />
 								</Link>
 							</div>
 							{/* End logo */}
