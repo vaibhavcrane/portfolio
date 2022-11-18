@@ -722,6 +722,29 @@ h6 {
 	overflow: hidden;
 	color: #555;
 }
+
+.hero .content a {
+	margin-top: 20px;
+	@media screen and (max-width: 767px) {
+		margin-top: 10px;
+	}
+}
+
+.hero .content .secondary-call-to-action a {
+	padding-left: 50px;
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	transition: scale 0.5s ease;
+	@media screen and (max-width: 767px) {
+		padding-left: 20px;
+	}
+}
+
+.hero .content .secondary-call-to-action a:hover {
+}
+
 .hero_small .container {
 	height: 100%;
 	@media screen and (max-width: 767px) {

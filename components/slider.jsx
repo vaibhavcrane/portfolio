@@ -141,6 +141,18 @@ const Slider = () => {
 							</span>
 						</div>
 						{/* End designation */}
+						<span className='slider-call-to-action'>
+							<a
+								className='white-fill-bg btn-outline btn_sm'
+								target='_blank'
+								rel='noopener noreferrer'
+								href='https://search.vaibhavrane.me'>
+								Try My Search
+							</a>
+						</span>
+						<span className='secondary-call-to-action'>
+							<a href='/gallery'>Visit Gallery</a>
+						</span>
 					</div>
 					{/* End content */}
 				</div>
