@@ -37,7 +37,7 @@ const Gallery = () => {
 	return (
 		<>
 			<Head>
-				<title>Vaibhav Rane |Gallery</title>
+				<title>Vaibhav Rane | Gallery</title>
 				<meta name='description' content="Vaibhav Rane's Photo Gallery" />
 			</Head>
 			<div className='scroll-snap all-wrap gallery-wrapper'>
