@@ -122,7 +122,13 @@ const Slider = () => {
 							<h2>
 								<span>
 									<Typewriter
-										words={["Vaibhav Rane", "an Engineer", "a Problem Solver"]}
+										words={[
+											"Vaibhav Rane",
+											"an Engineer",
+											"a Problem Solver",
+											"a rower",
+											"a coffee lover",
+										]}
 										loop={0}
 										cursor
 										cursorStyle='_'
@@ -152,7 +158,9 @@ const Slider = () => {
 							</a>
 						</span>
 						<span className='secondary-call-to-action'>
-							<Link href='/gallery'><a>Visit Gallery</a></Link>
+							<Link href='/gallery'>
+								<a>Visit Gallery</a>
+							</Link>
 						</span>
 					</div>
 					{/* End content */}
