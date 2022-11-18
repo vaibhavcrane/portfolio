@@ -11,6 +11,16 @@ import Head from "next/head";
 import ScrollToTop from "../../components/scroll-to-top";
 import { getGallery } from "../../services";
 
+function formattedNumber(value: number) {
+	if (value < 10) {
+		return `00${value}`;
+	}
+	if (value < 100) {
+		return `0${value}`;
+	}
+	return value;
+}
+
 export async function getStaticProps() {
 	const gallery = (await getGallery()) || [];
 	console.log(gallery);
@@ -39,7 +49,7 @@ function ImageOnScreen({
 				<img src={imageURL} alt={description} />
 			</div>
 			<motion.div style={{ y }} className='gallery-text'>
-				<h2>{`#00${imageId}`}</h2>
+				<h2>#{formattedNumber(imageId)}</h2>
 				<p className='description'>{location}</p>
 				<p className='date-taken'>{dateTaken}</p>
 			</motion.div>
