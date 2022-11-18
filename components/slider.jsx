@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { Typewriter } from "react-simple-typewriter";
+import Link from "next/link";
 
 const Slider = () => {
 	const particlesInit = useCallback(async (engine) => {
@@ -151,7 +152,7 @@ const Slider = () => {
 							</a>
 						</span>
 						<span className='secondary-call-to-action'>
-							<a href='/gallery'>Visit Gallery</a>
+							<Link href='/gallery'><a>Visit Gallery</a></Link>
 						</span>
 					</div>
 					{/* End content */}
