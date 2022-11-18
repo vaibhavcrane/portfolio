@@ -7,9 +7,6 @@ import {
 	useTransform,
 	MotionValue,
 } from "framer-motion";
-import Header from "../../components/Header";
-import ScrollToTop from "../../components/scroll-to-top";
-import Slider from "../../components/slider-small";
 
 function useParallax(value: MotionValue<number>, distance: number) {
 	return useTransform(value, [0, 1], [-distance, distance]);
