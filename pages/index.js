@@ -4,7 +4,6 @@ import Experience from "../components/experience";
 import Footer from "../components/footer";
 import ScrollToTop from "../components/scroll-to-top";
 import Header from "../components/header";
-import Blog from "../components/blog";
 import { getRecentPosts } from "../services";
 import Head from "next/head";
 import Slider from "../components/slider";
@@ -23,7 +22,6 @@ export default function Home({ posts }) {
 					<Slider />
 					<About />
 					<Experience />
-					<Blog posts={posts} />
 					<Footer />
 				</div>
 			</div>

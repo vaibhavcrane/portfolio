@@ -4,7 +4,6 @@ html {
 	overflow-x: hidden;
 	padding: 0px;
 	margin: 0px;
-	scroll-snap-type: y mandatory;
 }
 body {
 	font-family: "Roboto";
@@ -2254,30 +2253,6 @@ body.intro .loader_line:after {
 	}
 }
 
-section {
-	height: 100vh;
-	scroll-snap-align: center;
-}
-
-.gallery-image-temp {
-	margin-top: 150px;
-	padding: 300px 0px 100px 0px;
-	position: relative;
-	width: auto;
-	height: 700px;
-	align-items: center;
-
-	h2 {
-		margin: 0;
-		left: calc(50% + 130px);
-		font-size: 56px;
-		font-weight: 700;
-		letter-spacing: -3px;
-		line-height: 1.2;
-		position: absolute;
-	}
-}
-
 .breaking-bad {
 	@media screen and (max-width: 1040px) {
 		height: 100vh;
@@ -2308,4 +2283,120 @@ section {
 			}
 		}
 	}
+}
+
+.scroll-snap {
+	scroll-snap-type: y mandatory;
+}
+
+.gallery {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	scroll-snap-align: center;
+	perspective: 500px;
+
+	div {
+		width: 600px;
+		height: 600px;
+		position: relative;
+		max-height: 90vh;
+		margin: 20px;
+		background: var(--white);
+		overflow: hidden;
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+.progress {
+	position: fixed;
+	left: 0;
+	right: 0;
+	height: 5px;
+	background: #222;
+	bottom: 88px;
+	@media screen and (max-width: 767px) {
+		bottom: 78px;
+	}
+}
+
+.gallery-wrapper .white-fill-bg {
+	text-decoration: none;
+	color: #000;
+	background-color: #fff;
+	display: inline-block;
+	padding: 15px 48px;
+	border: 2px solid #000;
+	font-family: "Poppins";
+	transition: all 0.5s cubic-bezier(0, 0, 0.1, 1);
+	cursor: pointer;
+	font-size: 16px;
+	background: #000;
+	@media screen and (max-width: 767px) {
+		padding: 10px 25px;
+		font-size: 15px;
+	}
+
+	&.fill-black {
+		background: #000;
+		color: #fff;
+		border-color: #000;
+	}
+	&.btn-outline {
+		background: #fff;
+		color: #000;
+	}
+}
+.gallery-wrapper .white-fill-bg {
+	&:hover {
+		color: #fff;
+		background-color: #000;
+		transform: translateY(-3px);
+	}
+	&.fill-black {
+		&:hover {
+			background-color: #fff;
+			color: #000;
+		}
+	}
+	&.btn-outline {
+		&:hover {
+			background: #000 !important;
+			color: #fff !important;
+			border-color: #000 !important;
+		}
+	}
+}
+
+.gallery-button {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background-image: radial-gradient(
+		rgba(0, 0, 0, 0) 1px,
+		var(--background) 1px
+	);
+	background-size: 4px 4px;
+	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
+	-moz-backdrop-filter: blur(3px);
+	font-size: 14px;
+	line-height: 14px;
 }
