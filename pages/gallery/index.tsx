@@ -23,7 +23,6 @@ function formattedNumber(value: number) {
 
 export async function getStaticProps() {
 	const gallery = (await getGallery()) || [];
-	console.log(gallery);
 	return {
 		props: { gallery },
 	};
