@@ -149,17 +149,17 @@ const Slider = () => {
 						</div>
 						{/* End designation */}
 						<span className='slider-call-to-action'>
-							<a
-								className='white-fill-bg btn-outline btn_sm'
-								target='_blank'
-								rel='noopener noreferrer'
-								href='https://search.vaibhavrane.me'>
-								Try My Search
-							</a>
+							<Link href='/gallery'>
+								<a
+									className='white-fill-bg btn-outline btn_sm'
+									rel='noopener noreferrer'>
+									Visit Gallery
+								</a>
+							</Link>
 						</span>
 						<span className='secondary-call-to-action'>
-							<Link href='/gallery'>
-								<a>Visit Gallery</a>
+							<Link href='#contact'>
+								<a>Contact Me</a>
 							</Link>
 						</span>
 					</div>
