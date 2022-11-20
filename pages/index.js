@@ -7,6 +7,7 @@ import Header from "../components/header";
 import { getRecentPosts } from "../services";
 import Head from "next/head";
 import Slider from "../components/slider";
+import Contact from "../components/contact";
 
 export default function Home({ posts }) {
 	return (
@@ -22,6 +23,7 @@ export default function Home({ posts }) {
 					<Slider />
 					<About />
 					<Experience />
+					<Contact />
 					<Footer />
 				</div>
 			</div>

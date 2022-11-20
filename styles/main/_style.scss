@@ -536,7 +536,7 @@ h6 {
 		img.svg {
 			width: 25px;
 			height: 25px;
-			// filter: invert(0);
+			filter: invert(1);
 			z-index: 4;
 		}
 	}
@@ -1273,6 +1273,10 @@ body.loaded .overlay_effect:after {
 	padding-top: 27px;
 }
 
+.about .about_inner .right .svg {
+	filter: invert(0);
+}
+
 // Experience
 
 .skills {
@@ -1419,7 +1423,7 @@ body.loaded .overlay_effect:after {
 	height: auto;
 	clear: both;
 	float: left;
-	padding: 220px 0px 170px 0px;
+	padding: 150px 0px 50px 0px;
 	position: relative;
 	@media screen and (max-width: 767px) {
 		padding: 150px 0;
@@ -1593,15 +1597,15 @@ body.loaded .overlay_effect:after {
 	height: 40px !important;
 }
 
-.footer-socials {
+.talk_inner-socials {
 	ul > li {
 		display: inline-block;
 	}
 }
 
-.footer-socials .social li .svg {
-	width: 40px !important;
-	height: 40px !important;
+.talk_inner-socials .social li .svg {
+	width: 30px !important;
+	height: 30px !important;
 	filter: invert(1);
 	z-index: 4;
 }
@@ -1899,7 +1903,7 @@ body.intro .loader_line:after {
 	}
 }
 
-.footer-socials.social-default {
+.talk_inner-socials.social-default {
 	display: inline-flex;
 	list-style: none;
 	li {
@@ -2489,4 +2493,108 @@ body.intro .loader_line:after {
 	-moz-backdrop-filter: blur(3px);
 	font-size: 14px;
 	line-height: 14px;
+}
+
+//Footer
+.copyright {
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #000;
+	padding: 10px 0px;
+}
+.copyright .inner {
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	text-align: center;
+}
+.copyright p {
+	font-family: "Poppins";
+	color: #fff;
+	font-weight: 500;
+}
+.copyright a {
+	text-decoration: none;
+	color: #fff;
+}
+
+//Contact
+.contact {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+	justify-content: center;
+	align-items: center;
+	flex: 300px auto;
+}
+
+.contact h4 {
+	font-family: "Roboto";
+	font-weight: 700;
+	font-size: 36px;
+	color: #fff;
+	margin-bottom: 7px;
+}
+
+.contact .fields {
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.contact .fields .first {
+	width: 100%;
+	float: left;
+}
+.contact .fields ul {
+	margin: 0px;
+	list-style-type: none;
+}
+.contact .fields ul li {
+	width: 100%;
+	margin: 0px 0px 30px 0px;
+	float: left;
+}
+.contact .fields ul li input {
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: #fff;
+}
+.contact .fields ul li input:focus {
+	outline: none;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.contact .fields textarea {
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	height: 120px;
+	resize: none;
+	background-color: #fff;
+}
+.contact .fields .last textarea:focus {
+	outline: none;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.contact .empty_notice {
+	color: #f52225;
+	margin-bottom: 7px;
+	display: none;
+	text-align: left;
+	font-weight: 500;
+}
+.contact_form ul li span {
+	color: #f52225;
+	text-align: left;
+	font-weight: 400;
+}
+
+.contact_form .button {
+	padding: 0px;
+
+	.white-fill-bg {
+		padding: 10px 20px;
+	}
 }
