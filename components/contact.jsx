@@ -54,35 +54,15 @@ const Contact = () => {
 						<div className='left'>
 							<div className='title'>
 								<span style={{ backgroundColor: "#f2f2f2" }}>Contact</span>
+								<h4 className='eye-animation'>Stalk me on social media</h4>
+								<div className='talk_inner-socials'>
+									<Social />
+								</div>
 							</div>
-							<h4>
-								Send me an email
-								<span>
-									<img
-										style={{
-											width: "35px",
-											filter: "invert(1)",
-											paddingLeft: "10px",
-										}}
-										className='arrow-email'
-										src='/img/svg/arrow-right.svg'
-										alt=''
-									/>
-								</span>
-							</h4>
-							<h4>
-								<span>
-									<img
-										className='arrow-socials'
-										src='/img/svg/arrow-right.svg'
-										alt=''
-									/>
-								</span>
-								or stalk me on social media
-							</h4>
-							<div className='talk_inner-socials'>
-								<Social />
+							<div>
+								<h4>or send me an email &#8594;</h4>
 							</div>
+							<div></div>
 						</div>
 						<div className='right'>
 							<div className='fields'>

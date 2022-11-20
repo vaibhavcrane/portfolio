@@ -14,7 +14,10 @@ export default function Home({ posts }) {
 		<>
 			<Head>
 				<title>Vaibhav Rane | Portfolio</title>
-				<meta name='description' content="Vaibhav Rane's Portfolio" />
+				<meta
+					name='description'
+					content='Vaibhav Rane is an enginner and MBA. He likes to solve problems and making things simpler for the benefit of his customers and partners.'
+				/>
 			</Head>
 			<div className='all_wrap'>
 				<ScrollToTop />
