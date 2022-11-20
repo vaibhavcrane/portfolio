@@ -62,6 +62,7 @@ const Contact = () => {
 											filter: "invert(1)",
 											paddingLeft: "10px",
 										}}
+										className='arrow-email'
 										src='/img/svg/arrow-right.svg'
 										alt=''
 									/>
@@ -70,13 +71,7 @@ const Contact = () => {
 							<h4>
 								<span>
 									<img
-										style={{
-											width: "35px",
-											filter: "invert(1)",
-											paddingRight: "10px",
-											paddingTop: "5px",
-											transform: "rotate(90deg)",
-										}}
+										className='arrow-socials'
 										src='/img/svg/arrow-right.svg'
 										alt=''
 									/>

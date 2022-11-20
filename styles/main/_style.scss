@@ -2529,6 +2529,9 @@ body.intro .loader_line:after {
 	justify-content: center;
 	align-items: center;
 	flex: 300px auto;
+	@media screen and (max-width: 767px) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .contact h4 {
@@ -2537,6 +2540,10 @@ body.intro .loader_line:after {
 	font-size: 36px;
 	color: #fff;
 	margin-bottom: 7px;
+	@media screen and (max-width: 767px) {
+		font-size: 30px;
+		margin-bottom: 0px;
+	}
 }
 
 .contact .fields {
@@ -2596,5 +2603,22 @@ body.intro .loader_line:after {
 
 	.white-fill-bg {
 		padding: 10px 20px;
+	}
+}
+
+.arrow-socials {
+	width: 35px;
+	filter: invert(1);
+	padding-right: 10px;
+	padding-top: 5px;
+	transform: rotate(90deg);
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}
+
+.arrow-email {
+	@media screen and (max-width: 767px) {
+		display: none;
 	}
 }
