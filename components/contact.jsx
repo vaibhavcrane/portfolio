@@ -18,7 +18,6 @@ const Contact = () => {
 			method: "POST",
 			body: JSON.stringify(data),
 		}).catch((err) => console.log(err));
-		console.log(res);
 	};
 
 	const { ref, inView } = useInView();
