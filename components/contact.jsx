@@ -50,8 +50,11 @@ const Contact = () => {
 				<motion.div animate={animation} className='container talk_inner'>
 					<div div className='contact'>
 						<div className='left'>
+							<div className='title'>
+								<span style={{ backgroundColor: "#f2f2f2" }}>Contact</span>
+							</div>
 							<h4>
-								Contact me via email
+								Send me an email
 								<span>
 									<img
 										style={{
@@ -78,7 +81,7 @@ const Contact = () => {
 										alt=''
 									/>
 								</span>
-								or follow me on social media
+								or stalk me on social media
 							</h4>
 							<div className='talk_inner-socials'>
 								<Social />
