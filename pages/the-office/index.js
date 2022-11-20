@@ -1,17 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Head from "next/head";
-import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 
 export default function TheOffice() {
-	const particlesInit = useCallback(async (engine) => {
-		await loadFull(engine);
-	}, []);
-
-	const particlesLoaded = useCallback(async (container) => {}, []);
-	const [data, setData] = useState(null);
-	const [isLoading, setLoading] = useState(false);
-
 	useEffect(() => {
 		setLoading(true);
 		fetch(

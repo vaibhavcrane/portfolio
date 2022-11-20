@@ -14,6 +14,8 @@ const NotFound = () => {
 					<p>The page you are looking for could not be found.</p>
 
 					<a className='white-fill-bg btn-outline' href={"/"}>
+						{" "}
+						{/* TODO: Fix the button */}
 						BACK TO HOME
 					</a>
 					{/* End purchase_button */}

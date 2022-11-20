@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Scrollspy from "react-scrollspy";
+import Scrollspy from "react-scrollspy"; //TODO: deprecated. implement other library.
 import Social from "./social";
 import Link from "next/link";
+
+//TODO: Redo animations
 
 const Header = () => {
 	const [click, setClick] = useState(false);

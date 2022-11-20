@@ -3,7 +3,9 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useForm } from "react-hook-form";
 import Social from "./social";
-import axios from "axios";
+
+// TODO: Fix warning Warning: Received `true` for a non-boolean attribute `div`.
+//TODO: Redo animations
 
 const Contact = () => {
 	const {

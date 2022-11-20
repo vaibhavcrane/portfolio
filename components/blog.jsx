@@ -3,6 +3,8 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 
+//TODO: Redo animations
+
 export default function Blog({ posts }) {
 	const { ref, inView } = useInView();
 	const animation = useAnimation();

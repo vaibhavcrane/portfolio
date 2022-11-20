@@ -5,6 +5,8 @@ import Footer from "../../components/footer";
 import ScrollToTop from "../../components/scroll-to-top";
 import Head from "next/head";
 
+//TODO: Redo animations
+
 // we use this function to tell Nextjs how many paths to pre render
 export async function getStaticPaths() {
 	const posts = (await getPosts()) || [];

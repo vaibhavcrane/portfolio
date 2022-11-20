@@ -4,6 +4,8 @@ import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import Social from "./social";
 
+//TODO: Redo animations
+
 const About = () => {
 	const { ref, inView } = useInView();
 	const animation = useAnimation();
