@@ -77,7 +77,7 @@ const Slider = () => {
 									enable: true,
 									outMode: "bounce",
 									random: false,
-									speed: 2,
+									speed: 0.75,
 									straight: false,
 								},
 								number: {

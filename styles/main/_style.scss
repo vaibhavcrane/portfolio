@@ -601,6 +601,18 @@ h6 {
 		}
 	}
 }
+
+.slider-call-to-action .white-fill-bg {
+	background: #fff !important;
+	border: none;
+	color: #000 !important;
+	font-weight: 500;
+
+	&:hover {
+		transform: scale(1.05) !important;
+	}
+}
+
 .hero .background {
 	position: absolute;
 	right: 0px;
