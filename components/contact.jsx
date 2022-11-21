@@ -50,7 +50,7 @@ const Contact = () => {
 				</div>
 
 				<motion.div animate={animation} className='container talk_inner'>
-					<div div className='contact'>
+					<div className='contact'>
 						<div className='left'>
 							<div className='title'>
 								<span style={{ backgroundColor: "#f2f2f2" }}>Contact</span>
