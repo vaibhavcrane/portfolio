@@ -46,13 +46,13 @@ const Header = () => {
 							currentClassName='current'
 							offset={-250}>
 							<li>
-								<Link href='#home'>Home</Link>
+								<Link href='/#home'>Home</Link>
 							</li>
 							<li>
-								<Link href='#about'>About</Link>
+								<Link href='/#about'>About</Link>
 							</li>
 							<li>
-								<Link href='#experience'>Experience</Link>
+								<Link href='/#experience'>Experience</Link>
 							</li>
 							<li>
 								<Link href='/blogs'>Blog</Link>
@@ -61,7 +61,7 @@ const Header = () => {
 								<Link href='/gallery'>Gallery</Link>
 							</li>
 							<li>
-								<Link href='#contact'>Contact</Link>
+								<Link href='/#contact'>Contact</Link>
 							</li>
 							<li>
 								<a
@@ -119,12 +119,12 @@ const Header = () => {
 									</Link>
 								</li>
 								<li>
-									<Link href='#about'>
+									<Link href='/#about'>
 										<a onClick={handleClick}>About</a>
 									</Link>
 								</li>
 								<li>
-									<Link href='#experience'>
+									<Link href='/#experience'>
 										<a onClick={handleClick}>Experience</a>
 									</Link>
 								</li>
@@ -139,7 +139,7 @@ const Header = () => {
 									</Link>
 								</li>
 								<li>
-									<Link href='#contact'>
+									<Link href='/#contact'>
 										<a onClick={handleClick}>Contact</a>
 									</Link>
 								</li>
