@@ -44,7 +44,7 @@ const Header = () => {
 								"contact",
 							]}
 							currentClassName='current'
-							offset={-200}>
+							offset={-250}>
 							<li>
 								<Link href='#home'>Home</Link>
 							</li>
