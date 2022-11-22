@@ -42,17 +42,17 @@ const Header = () => {
 					<div className='menu'>
 						<div className='anchor_nav'>
 							<li>
-								<Link href='/#home' onClick={scrollTo("home")}>
+								<Link href='/' onClick={scrollTo("home")}>
 									Home
 								</Link>
 							</li>
 							<li>
-								<Link href='/#about' onClick={scrollTo("about")}>
+								<Link href='/' onClick={scrollTo("about")}>
 									About
 								</Link>
 							</li>
 							<li>
-								<Link href='/#experience' onClick={scrollTo("experience")}>
+								<Link href='#experience' onClick={scrollTo("experience")}>
 									Experience
 								</Link>
 							</li>
@@ -63,7 +63,7 @@ const Header = () => {
 								<Link href='/gallery'>Gallery</Link>
 							</li>
 							<li>
-								<Link href='/#contact' onClick={scrollTo("contact")}>
+								<Link href='#contact' onClick={scrollTo("contact")}>
 									Contact
 								</Link>
 							</li>
