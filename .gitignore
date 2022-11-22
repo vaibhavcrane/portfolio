@@ -4,6 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
+package-lock.json
+node_modules
 
 # testing
 /coverage
@@ -35,8 +37,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-node_modules
 
+#Environment Variables
 .env
 
-package-lock.json
+#extensions
+.vscode
