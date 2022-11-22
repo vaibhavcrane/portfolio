@@ -59,7 +59,7 @@ const Contact = () => {
 								</div>
 							</div>
 							<div>
-								<h4>or send me an email &#8594;</h4>
+								<h4 className='email-header'>or send me an email</h4>
 							</div>
 							<div></div>
 						</div>
