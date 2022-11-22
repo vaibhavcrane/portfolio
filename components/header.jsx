@@ -10,6 +10,13 @@ const Header = () => {
 	const handleClick = () => setClick(!click);
 	const [navbar, setNavbar] = useState(false);
 
+	const scrollTo = (id) => {
+		useEffect(() => {
+			const element = document.getElementById(id);
+			element.scrollIntoView({ behavior: "smooth" });
+		});
+	};
+
 	const changeBackground = () => {
 		if (window.scrollY >= 80) {
 			setNavbar(true);
@@ -33,26 +40,21 @@ const Header = () => {
 					</div>
 					{/* End logo */}
 					<div className='menu'>
-						<Scrollspy
-							className='anchor_nav'
-							items={[
-								"home",
-								"about",
-								"experience",
-								"blog",
-								"gallery",
-								"contact",
-							]}
-							currentClassName='current'
-							offset={-250}>
+						<div className='anchor_nav'>
 							<li>
-								<Link href='/#home'>Home</Link>
+								<Link href='/#home' onClick={scrollTo("home")}>
+									Home
+								</Link>
 							</li>
 							<li>
-								<Link href='/#about'>About</Link>
+								<Link href='/#about' onClick={scrollTo("about")}>
+									About
+								</Link>
 							</li>
 							<li>
-								<Link href='/#experience'>Experience</Link>
+								<Link href='/#experience' onClick={scrollTo("experience")}>
+									Experience
+								</Link>
 							</li>
 							<li>
 								<Link href='/blogs'>Blog</Link>
@@ -61,7 +63,9 @@ const Header = () => {
 								<Link href='/gallery'>Gallery</Link>
 							</li>
 							<li>
-								<Link href='/#contact'>Contact</Link>
+								<Link href='/#contact' onClick={scrollTo("contact")}>
+									Contact
+								</Link>
 							</li>
 							<li>
 								<a
@@ -72,7 +76,7 @@ const Header = () => {
 									Try My Search
 								</a>
 							</li>
-						</Scrollspy>
+						</div>
 					</div>
 					{/* End menu */}
 				</div>
