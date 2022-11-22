@@ -2555,7 +2555,7 @@ body.intro .loader_line:after {
 	h4 {
 		font-family: "Roboto";
 		font-weight: 800;
-		text-transform: uppe/rcase;
+		// text-transform: uppercase;
 		font-size: 30px;
 		color: #fff;
 		margin-bottom: 7px;
@@ -2589,6 +2589,7 @@ body.intro .loader_line:after {
 	width: 100%;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	background-color: #fff;
+	border-radius: 5px;
 }
 .contact .fields ul li input:focus {
 	outline: none;
@@ -2597,13 +2598,14 @@ body.intro .loader_line:after {
 .contact .fields textarea {
 	width: 100%;
 	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
 	height: 120px;
-	resize: none;
+	resize: vertical;
 	background-color: #fff;
 }
 .contact .fields .last textarea:focus {
 	outline: none;
-	border: 1px solid rgba(0, 0, 0, 0.5);
+	// border: 1px solid rgba(0, 0, 0, 0.5);
 }
 .contact .empty_notice {
 	color: #f52225;
