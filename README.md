@@ -1,1 +1,1 @@
-Repository for my personal portfolio at [vaibhavrane.me][vaibhavrane.me]
+Repository for my personal portfolio at https://vaibhavrane.me
