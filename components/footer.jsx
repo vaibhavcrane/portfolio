@@ -9,22 +9,28 @@ const Footer = () => {
 
 	useEffect(() => {
 		if (inView) {
-			animation.start({ opacity: 1, y: 0, transition: { duration: 1.5 } });
+			animation.start({ opacity: 1, y: 0, transition: { duration: 1 } });
 		}
 		if (!inView) {
-			animation.start({ opacity: 0, y: 50 });
+			animation.start({ opacity: 0, y: 20 });
 		}
 	}, [inView]);
 
 	return (
 		<>
 			<div ref={ref} className='section'>
-				<div className='copyright'>
-					<div className='container'>
-						<motion.div animate={animation} className='inner'>
-							<p>fin.</p>
-						</motion.div>
-						{/* End inner */}
+				<div
+					style={{
+						backgroundImage: `url(${"img/footer/background.jpg"})`,
+					}}
+					className='copyright'>
+					<div className='overlay'>
+						<div className='container'>
+							<motion.div animate={animation} className='inner'>
+								<p>fin.</p>
+							</motion.div>
+							{/* End inner */}
+						</div>
 					</div>
 				</div>
 				{/* End copyright */}
