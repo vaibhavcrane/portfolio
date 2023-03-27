@@ -17,20 +17,25 @@ export default function Experience() {
 		}
 	}, [inView]);
 	return (
-		<div ref={ref} className='section'>
-			<motion.div className='skills' id='experience' animate={animation}>
+		<div
+			ref={ref}
+			className='section'>
+			<motion.div
+				className='skills'
+				id='experience'
+				animate={animation}>
 				<div className='container'>
 					<div className='skills_inner'>
 						<div className='left'>
 							<div className='title'>
 								<span>My Experience</span>
-								<h3>
-									I am an Operations professional with three years of experience
-								</h3>
+								<h3>I am an Operations professional with two years of experience</h3>
 							</div>
 							<div>
 								<div className='button'>
-									<a href='/documents/resume/resume.pdf' download>
+									<a
+										href='/documents/resume/resume.pdf'
+										download>
 										Download Resume
 									</a>
 								</div>
@@ -38,7 +43,7 @@ export default function Experience() {
 						</div>
 						<div className='right'>
 							<div className='tokyo_progress'>
-								<div className='progress_inner'>
+								{/* <div className='progress_inner'>
 									<span>
 										<span className='label'>Operations Manager</span>
 										<span className='number'>Aug 2019 - Jul 2020</span>
@@ -52,7 +57,7 @@ export default function Experience() {
 											as well as led projects to increase production capacity
 										</p>
 									</div>
-								</div>
+								</div> */}
 								<br />
 								<div className='progress_inner'>
 									<span>
@@ -64,9 +69,8 @@ export default function Experience() {
 									</div>
 									<div className='text'>
 										<p>
-											I managed the sales of petroleum products at 60 retail
-											outlets and implemented 4 different porjects across all
-											the sites
+											I managed the sales of petroleum products at 60 retail outlets and implemented 4 different
+											porjects across all the sites
 										</p>
 									</div>
 								</div>
@@ -80,10 +84,7 @@ export default function Experience() {
 										<p>Indian Oil Corporation Limited</p>
 									</div>
 									<div className='text'>
-										<p>
-											I worked on increasing the efficiency of the plant while
-											maintaining high safety standards
-										</p>
+										<p>I worked on increasing the efficiency of the plant while maintaining high safety standards</p>
 									</div>
 								</div>
 							</div>
